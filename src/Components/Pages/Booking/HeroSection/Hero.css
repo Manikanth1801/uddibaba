@@ -1,0 +1,13 @@
+.heroSection Button:focus {
+    outline: none !important;
+}
+
+.heroRounded {
+    height: auto;
+    border-radius: 15px;
+}
+
+.heroRounded img {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}

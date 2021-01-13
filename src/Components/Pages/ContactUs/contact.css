@@ -1,0 +1,161 @@
+a{
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+.social{
+    padding: 20px;
+    color: rgb(255, 0, 0);
+    font-size: 1rem;
+    
+}
+#contact{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:  translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+
+}
+
+.social{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, .1);
+}
+
+.social a:hover{
+    color: #000000;
+    transition: all ease 0.3s;
+}
+
+
+.contactBox{
+    background-color: #434445;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px;
+    box-shadow: 2px 0px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+.cHead h1{
+
+    color: #e7eef3;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.cHead p{
+    color: #cecece;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.cInputs{
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
+.cInputs input{
+    width: 250px !important;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(251, 251, 251, 0.1);
+    outline: none;
+    margin: 10px 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #f4f4f4;
+    display: flex;
+
+}
+
+.cInputs textarea{
+    width: 250px !important;
+    height: 200px !important;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(82, 82, 82, 1);
+    color: #f4f4f4;
+    padding: 10px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    
+}
+
+.cInputs button{
+    width: 200px;
+    height: 40px;
+    background-attachment: #ffffff;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+
+}
+
+.cInputs input:focus{
+    border-bottom: 1px solid rgba(251, 251, 251, 1.00);
+    transition: all ease 0.5s;
+}
+.cInputs textarea:focus{
+    border: none;
+    border-bottom: 1px solid rgba(251, 251, 251, 1.00);
+    transition: all ease 0.5s;
+}
+
+.cInputs button:active{
+    transform: scale(1.02);
+}
+
+.map{
+    filter: grayscale(0.2);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFFFFF;
+}
+
+@media(max-width:1100px){
+    .map{
+        display: none;
+    }
+}
+@media(max-width:450px){
+    .social{
+        display: none;
+    }
+    .contactBox{
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+
+    }
+    #contact{
+        position: static;
+        transform: translate(0,0);
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        
+    }
+    .cHead h1{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
