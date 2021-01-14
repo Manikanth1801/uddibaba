@@ -56,14 +56,7 @@ function DisplayCard(props) {
     <Fragment>
         
       
-                      {/* <div className={classes.labelAlignment}>
-                          <strong>
-                          {props.title1}
-                          </strong>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati debitis eum, nihil enim vero rem, 
-                              laudantium reprehenderit officia suscipit sunt
-                              , eveniet magnam repudiandae. Illo, aliquid. Ea non eos quia aliquid.</p>
-                      </div> */}
+                      
                       <figure className="snip1581"><img src={props.image} alt="profile-sample2"/>
                       <figcaption>
                         <h3 className="title1">{props.title1}</h3>

@@ -78,11 +78,7 @@ export default function AmeCard() {
                   );
               })}
 
-            {/* {dataSet.map((item)=>{
-                            return(
-                                <AmeCard title1={item.title1} title2={item.title2} title3={item.title3} image={item.image}/>
-                                );
-                        })} */}
+            
 
 
 

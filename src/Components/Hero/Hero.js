@@ -26,13 +26,7 @@ const Hero = () =>{
       
       <div className={classes.content}>
         <Grid item xs={6} style={{display:"flex" , marginLeft:"50px", opacity:"0.85", backgroundColor:"lightgray" ,borderRadius:50}}>
-        {/* <Button 
-        fullWidth
-        size="large"
-        style={{padding:"none"}}
-        color='inherit'
         
-        variant="text">Explore</Button> */}
         </Grid>
       </div>
       

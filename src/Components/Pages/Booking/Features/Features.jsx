@@ -76,7 +76,7 @@ function Features() {
     <section className="features container py-5">
       <div className="row">
         <div className="col-12 col-sm-6">
-          <Box className="d-flex justify-content-between align-items-end">
+          <Box className="d-flex justify-content-between align-items-end my-3">
             <div>
               <Typography align="left" variant="h5">Tent hosted by Uddibaba</Typography>
               <Typography color="textSecondary">
@@ -92,8 +92,8 @@ function Features() {
               />
             </div>
           </Box>
-          <div className="features-items">
-            <hr className="w-auto h-auto" />
+          <div className="features-items my-3">
+            <hr className="w-auto h-auto mb-3" />
             {featureList.map((item, index) => {
               return (
                 <GridListTile key={index} className={classes.featureList}>

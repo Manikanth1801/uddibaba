@@ -50,24 +50,11 @@ const useStyles = makeStyles((theme)=>({
 
 const Header = (props)=>{
     const classes=useStyles();
-    // const[menuToggler , setMenuToggler]= useState(null);
-    // const mobMenOpen=Boolean(menuToggler);
-    // const openMobMenu = (e) => {
-    //     return setMenuToggler(e.currentTarget);
-    // };
-    // const closeMobMenu = () => {
-    //     return setMenuToggler(null);
-    // };
+    
 
     return(
         <div >
-            {/* <AppBar 
-            color = "transparent"
-            style={{boxShadow:"1px 0px 0px 0px"}}
-            className={classes.appBar}
             
-            >
-                <Toolbar  > */}
                     {console.log(props)}
     <header className={classes.main} 
     style={{
@@ -122,97 +109,6 @@ const Header = (props)=>{
 
     </header>
 
-
-                    {/* <MenuItem 
-                    style={{flexGrow:"1", color:"white"}}
-                    
-                    component={Link}
-                    to = "/"
-                    >
-                    <IconButton
-                    color="inherit"
-                    >
-                    Uddibaba
-                    </IconButton>
-                    
-                    </MenuItem>
-
-                    <div className={classes.Dview}>
-                        
-                    <MenuItem 
-                    component = {Link}
-                    to = "/about"
-                    >
-                        <Typography 
-                        variant ="h6"
-                        display= 'inline'
-                        >
-                            About
-                        </Typography>
-                     </MenuItem>
-
-                     <MenuItem
-                     component = {Link}
-                     to = "/contact"
-                     >
-                        <Typography 
-                        variant ="h6"
-                        display= 'inline'
-
-                        >
-                            Contact
-                        </Typography>
-                     </MenuItem>
-
-                     <MenuItem
-                     component = {Link}
-                     to = "/event"
-                      >
-                        <Typography 
-                        variant ="h6"
-                        display= 'inline'
-
-                        >
-                            Events
-                        </Typography>
-                     </MenuItem>
-
-                     <MenuItem
-                     component = {Link}
-                     to = "/blog"
-                     >
-                        <Typography 
-                        variant ="h6"
-                        display= 'inline'
-
-                        >
-                            Blog
-                        </Typography>
-                    </MenuItem>
-                    
-                    <Button
-                    className={classes.button}
-                    color = "default"
-                    size='medium'
-
-                    startIcon ={<CardTravel/>}
-                    component = {Link}  
-                    to = "/booking"
-                    >
-                        Book Now
-                    </Button>
-                
-                    </div> */}
-
-                    {/* <IconButton color="black" onClick={openMobMenu} >
-                        <MenuIcon />
-                    </IconButton> */}
-                    {/* <MobMenu className={classes.mView} closeMobMenu={closeMobMenu} /> */}
-
-                    
-                {/* </Toolbar>
-            </AppBar> */}
-            {/* <MobMenu anchorEl={menuToggler} mobMenOpen={mobMenOpen} /> */}
         </div>
     );
 }

@@ -24,6 +24,7 @@ function App() {
         <Route exact path='/event' component = {Event}/>
         <Route exact path='/blog' component = {Blog}/>
         <Route exact path='/booking' component = {Booking}/>
+        <Route path="*" component = {Home}/>
       </Switch>
       <Footer/>
     </div>

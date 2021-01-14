@@ -7,14 +7,15 @@ import Hero from "./HeroSection/Hero";
 import Header from "../../Header/Header";
 import NavBar from "../../Header/Header2";
 import ImageGrid from './HeroSection/ImageGrid'
+import { Link } from "@material-ui/core";
 
 const Booking = ()=> {
   return (
-    <Fragment>
+    <Fragment >
       <NavBar/>
       {/* <Hero /> */}
       <ImageGrid/>
-      <Features />
+      <Features  id="features"/>
       <Amenities />
     </Fragment>
   );

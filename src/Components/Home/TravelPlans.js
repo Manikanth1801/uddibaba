@@ -132,68 +132,6 @@ function Copyright() {
         </Container>
 
 
-{/* 
-      <div className="holder">
-      <Tilt option={{max:35, speed:600}}>
-
-<div className="space" >
-    <div className="imgBox">
-        <img src="https://a0.muscache.com/im/pictures/dce09281-5d9a-4d79-a032-befb74aae05e.jpg?im_w=720" width="300px" height="180px" alt="classic Card" />
-    </div>
-    <div className="contentBox">
-        <h3>
-            Home Stay
-        </h3>
-        <span>MOnthly</span>
-        <p>
-           <span>Price <del>$348.99</del><h4>$289.99</h4> </span>
-            </p>
-        <button className="buyBtn" type="submit">Book Now</button>
-    </div>
-</div>
-
-</Tilt>
-
-        
-        <Tilt option={{max:35, speed:600}}>
-
-        <div className="space" >
-            <div className="imgBox">
-                <img src="https://a0.muscache.com/im/pictures/dce09281-5d9a-4d79-a032-befb74aae05e.jpg?im_w=720" width="300px" height="210px" alt="classic Card" />
-            </div>
-            <div className="contentBox">
-                <h3>
-                    Home Stay
-                </h3>
-                <span>Day-Wise</span>
-                <p>
-                   <span>Price <del>$349.99</del><h4>$299.99</h4> </span>
-                    </p>
-                <button className="buyBtn" type="submit">Book Now</button>
-            </div>
-        </div>
-
-        </Tilt>
-        
-
-        <Tilt option={{max:35, speed:600}}>
-        <div className="space">
-            <div className="imgBox">
-                <img src="https://a0.muscache.com/im/pictures/dce09281-5d9a-4d79-a032-befb74aae05e.jpg?im_w=720" width="340px" height="210px" alt="classic Card" />
-            </div>
-            <div className="contentBox">
-                <h3>
-                    Nomadic
-                </h3>
-                <span>Digital Nomad</span>
-                <p>
-                   <span>Price <del>$299.99</del><h4>$254.99</h4> </span>
-                    </p>
-                    <button className="buyBtn" type="submit">Book NOw</button>
-            </div>
-        </div>
-        </Tilt>
-    </div> */}
 
 
     </Fragment>

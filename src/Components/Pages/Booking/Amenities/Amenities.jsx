@@ -70,7 +70,11 @@ function Amenities() {
         <div className="row">
           <div className="col-12 col-sm-6">
             <div>
-              <h4 className="mb-3 text-start"> Amenities</h4>
+              <Typography component="h4" className="mb-3" align="left">
+                <strong>
+                Amenities
+                </strong>
+              </Typography>
               <div className="d-flex  flex-wrap">
                 {AmenitiesItems.map((item, index) => {
                   // console.log(item, "/////");
