@@ -38,11 +38,16 @@ nav{
     
 }
 .brandName{
+    height: 88px;
     font-size: 3rem;
     font-weight: 300;
     transform: translateX(-100rem);
     animation: slideIn .5s forwards;
 
+}
+.brandName img{
+    width: 180px !important;
+    width: 180px !important;
 }
 .brandName span{
     font-family: 'Permanent Marker', cursive;
@@ -127,6 +132,7 @@ nav ul li:nth-child(4){
 }
 
 header .video{
+    filter: brightness(0.4);
     width: 100%;
     overflow: hidden;
     justify-content: center;
@@ -142,6 +148,7 @@ header .video{
 
 
 header video{
+    filter: brightness(0.4);
     width: 100%;
     overflow: hidden;
     justify-content: center;

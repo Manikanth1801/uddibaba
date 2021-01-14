@@ -1,22 +1,5 @@
 {
   "hosting": {
-    "redirect":[
-      {
-        "source":"/about",
-        "destination":"/about",
-        "type":301
-      },
-      {
-        "source":"/contact",
-        "destination":"/contact",
-        "type":301
-      },
-      {
-        "source":"/booking",
-        "destination":"/booking",
-        "type":301
-      }
-    ],
     "public": "build",
     "ignore": [
       "firebase.json",

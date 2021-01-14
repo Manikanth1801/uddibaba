@@ -60,8 +60,10 @@ const Header = (props)=>{
     style={{
         background: "linear-gradient(rgba(46, 43, 43, 0.8), rgba(109, 51, 51, 0.5)) center no-repeat" }}>
         <video autoPlay muted loop > 
-             <source src="/asserts/video.mp4" type="video/mp4" />
-            {/* <ReactPlayer url="https://www.youtube.com/watch?v=DUtBFxvyUJ0" width="100%" height="100%"
+             <source src="/asserts/Uddibaba.mp4" type="video/mp4" />
+             {/* <iframe className="video" width="560" height="315" src="https://www.youtube.com/embed/DUtBFxvyUJ0?controls=0&amp;start=20"
+               autoplay="1&controls=0&loop=1&start=20&color=white" frameborder="0" allowfullscreen></iframe> */}
+            {/* <ReactPlayer url="https://drive.google.com/file/d/1poHN3isJF7kqjrWnTg8qOLr1PRHJ1VMo/preview" width="640" height="480" width="100%" height="100%"
             className="video" muted loop="true" controls="false" playing="true"/> */}
         </video>        
         <div className="navBar ">
@@ -75,12 +77,14 @@ const Header = (props)=>{
                             document.querySelector(".bg-transperent").className = "bg-transperent";
                           }}}>
                             <h1 className="brandName navbar-brand">
-                                <Link to="/"><span>UDDIBABA</span></Link>
+                                <Link to="/">
+                                    <img src="/asserts/images/UD.png" alt=""/>
+                                    </Link>
                             </h1>
                             <button className="navbar-toggler text-white" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                                 aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
+                                <span className="navbar-toggler-icon "></span>
                             </button>
 
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">

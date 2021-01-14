@@ -1,3 +1,4 @@
+
 a{
     text-decoration: none;
     margin-bottom: 25px;
@@ -147,6 +148,7 @@ a{
 
     }
     #contact{
+        
         position: static;
         transform: translate(0,0);
         width: 100%;

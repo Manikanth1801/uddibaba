@@ -1,4 +1,12 @@
-
+footer{
+    padding-top: 19%;
+    background: url("../../asserts/images/main/39830582dc59edc15f628021c117455e.png") no-repeat scroll center 0;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100vh;
+    bottom: 0%;
+    z-index: -5000;
+}
 .new_footer_top {
     padding: 120px 0px ;
     position: relative;
@@ -55,7 +63,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
-    color: #030b11;
+    color: #008cf7;
 }
 .new_footer_top .f_widget.about-widget .f_list li {
     margin-bottom: 11px;
@@ -83,7 +91,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     border-radius: 50%;
     font-size: 14px;
     line-height: 45px;
-    color: #2c3244;
+    color: #ffffff;
     display: inline-block;
     background: #ebeef5;
     text-align: center;
@@ -128,7 +136,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .new_footer_top .f-title {
     margin-bottom: 30px;
-    color: #1a1919;
+    color: #ffffff;
 }
 .f_600 {
     font-weight: 600;
@@ -145,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .new_footer_top .footer_bg {
-    z-index: -1000;
+    z-index: -5000;
     position: absolute;
     bottom: 0;
     background: url("../../asserts/images/main/39830582dc59edc15f628021c117455e.png") no-repeat scroll center 0;
@@ -175,7 +183,8 @@ h1, h2, h3, h4, h5, h6 {
   background-size:100%;
     bottom: 0;
     left: 38%;
-    position: absolute;
+    position: relative;
+    /* absolute */
     -webkit-animation: myfirst 30s linear infinite;
     animation: myfirst 30s linear infinite;
 }

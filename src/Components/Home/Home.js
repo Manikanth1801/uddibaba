@@ -102,7 +102,7 @@ const useStyle= makeStyles ({
           </div>
 
           <Grid item xs={12} sm={12} md={12} lg= {12} >
-            <Typography variant = "h2">
+            <Typography variant = "h3" align="center">
                What does our Customer says
             </Typography>
             </Grid>

@@ -13,15 +13,17 @@
   color: #ffffff;
   text-align: left ;
   font-size: 16px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); */
 }
 .snip1581 * {
+  border-radius: 25px;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .snip1581 img {
+  border-radius: 25px;
   max-width: 100%;
   vertical-align: top;
 }

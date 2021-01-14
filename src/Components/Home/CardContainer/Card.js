@@ -87,3 +87,5 @@ export default function AmeCard() {
     </Fragment>
   );
 }
+
+export{data};

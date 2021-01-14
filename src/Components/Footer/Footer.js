@@ -188,9 +188,9 @@ export default function Footer() {
                     <div className="footer_bottom">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6 col-sm-7 offset-lg-6">
+                        <div className="col-lg-6 col-sm-7 offset-md-6">
                           <Typography align="center" component="a">
-                          <a href="http://www.mxrapro.com" className="mb-0 text-primary">© MXRAPRO Inc.. 2021 All rights reserved.</a>
+                          <a href="http://www.mxrapro.com" style={{opacity:"50%"}} target="_blank" className="mb-0 text-light">© MXRAPRO Inc.. 2021 All rights reserved.</a>
                           </Typography>
                         </div>
                     </div>

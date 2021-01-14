@@ -5,18 +5,15 @@ import Iframe from 'react-iframe';
 import './contact.css'
 import { Fragment } from 'react';
 import { Facebook, Instagram, YouTube } from '@material-ui/icons';
+import NavBar from '../../Header/Header2';
 
 
 const Contact = () => {
     return (
         <React.Fragment>
-          <Header/>
-
-
-
-
+          <NavBar/>
           
-        <secttion id="contact">
+        <section className="container-fluid justify-content-center" id="contact">
             <div className="social">
 
                 <a href="#"><Facebook/></a>
@@ -31,15 +28,15 @@ const Contact = () => {
                         <h1>Get In Touch</h1>
                         <p><a href="mailto:manikanthapanigrahi@gmail.com">
                          E-mail us Regarding your Issue
-                          </a> or
-                          <a href="tel:+91 8455846313"> Call Us</a>
+                          </a><br/> or
+                          <a href="tel:+91 8455846313"> Call Us at 8455846313</a>
                           </p>
                     </div>
                     <div className="cInputs">
                         <input type="text" name="" id="" placeholder="Full Name"/>
                         <input type="email" name="" id="" placeholder="sample@gmail.com"/>
                         <textarea name="" id="" cols="20" rows="3" placeholder="Write Message"></textarea>
-                        <button type="submit">Send</button>
+                        <button className="bg-light" type="submit">Send</button>
                     </div>
 
                 </div>
@@ -56,7 +53,10 @@ const Contact = () => {
                  aria-hidden="false" tabindex="0"></Iframe>
 
                 </div>
-        </secttion>
+        </section>
+        <div style={{height:"100vh"}}>
+          
+        </div>
     
     
             {/* <main className="profile-page">

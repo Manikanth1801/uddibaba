@@ -593,6 +593,8 @@
   
   @media (min-width: 1280px) {
     .container {
+      
+        /* padding-top: 19%; */
       max-width: 1280px;
     }
   }

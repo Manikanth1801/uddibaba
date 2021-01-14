@@ -30,11 +30,11 @@ import './imagegrid.css'
         Oat cake
       </div>
     </div> */}
-    <div className="item item--full">
+    {/* <div className="item item--full">
       <div className="item__details">
          jujubes cheesecake
       </div>
-    </div>
+    </div> */}
     <div className="item">
       <div className="item__details">
         jelly-o brownie sweet
