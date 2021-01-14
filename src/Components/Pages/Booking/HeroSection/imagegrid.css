@@ -122,6 +122,7 @@ section h1 {
   }
 }
 .item__details {
+  display: none;
   position: relative;
   z-index: 1;
   padding: 15px;

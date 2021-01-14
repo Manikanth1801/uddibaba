@@ -77,7 +77,7 @@ const Header = (props)=>{
             {/* <ReactPlayer url="https://www.youtube.com/watch?v=DUtBFxvyUJ0" width="100%" height="100%"
             className="video" muted loop="true" controls="false" playing="true"/> */}
         </video>        
-        <div className="navBar fixed">
+        <div className="navBar ">
 
 
 
@@ -88,7 +88,7 @@ const Header = (props)=>{
                             document.querySelector(".bg-transperent").className = "bg-transperent";
                           }}}>
                             <h1 className="brandName navbar-brand">
-                                <Link to="/">Br<span>a</span>nd</Link>
+                                <Link to="/"><span>UDDIBABA</span></Link>
                             </h1>
                             <button className="navbar-toggler text-white" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

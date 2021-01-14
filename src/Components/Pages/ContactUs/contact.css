@@ -22,12 +22,12 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #5e91c0;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, .1);
 }
 
 .social a:hover{
-    color: #000000;
+    color: #cf1f1f;
     transition: all ease 0.3s;
 }
 

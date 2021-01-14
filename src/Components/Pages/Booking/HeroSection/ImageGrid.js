@@ -7,7 +7,7 @@ import './imagegrid.css'
        <div className="message">
   Sorry, your browser does not support CSS Grid. 😅
 </div>
-<section className="section">
+<section className="section my-0 py-0">
   {/* <h1>Nom Nom Gallery</h1> */}
   <div className="grid">
     {/* <div className="item">

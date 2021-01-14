@@ -17,7 +17,7 @@ const NavBar = () =>{
           
         <nav className="navbar navbar-expand-md  navbar-light  bg-light py-0">
                             <h1 className="brandName navbar-brand">
-                                <Link to="/">Br<span>a</span>nd</Link>
+                                <Link to="/"><span>UDDIBABA</span></Link>
                             </h1>
                             <button className="navbar-toggler text-white" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

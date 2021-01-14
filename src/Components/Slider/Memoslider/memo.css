@@ -1,0 +1,108 @@
+.Carousel {
+  position: relative;
+}
+.Carousel-wrapper {
+  position: relative;
+  left: 50%;
+  top: 0%;
+  width: 70%;
+  height: 80%;
+  transform: translateX(-50%);
+}
+.Carousel-single {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px 0;
+}
+.Carousel-single.Carousel-active {
+  z-index: 2;
+}
+.Carousel-single.Carousel-active .Carousel-nextArrow, .Carousel-single.Carousel-active .Carousel-backArrow {
+  display: block;
+}
+.Carousel-single.Carousel-active .Carousel-single-content {
+  transform: translateX(0%) scale(1);
+  opacity: 1;
+}
+.Carousel-single.Carousel-proactive .Carousel-single-content {
+  transform: translateX(25%) scale(0.8);
+  opacity: 0.7;
+}
+.Carousel-single.Carousel-preactive .Carousel-single-content {
+  transform: translateX(-25%) scale(0.8);
+  opacity: 0.7;
+}
+.Carousel-single.Carousel-proactive, .Carousel-single.Carousel-preactive {
+  z-index: 1;
+}
+.Carousel-single-content {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: 300ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+  transform: scale(0);
+  opacity: 0;
+}
+.Carousel-single-content img {
+  height: 100%;
+  width: 100%;
+}
+.Carousel-nextArrow {
+  position: absolute;
+  z-index: 3;
+  left: 101%;
+  padding: 20px 15px;
+  height: 101%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -2px;
+  display: none;
+  top: 0;
+}
+.Carousel-nextArrow > div {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  color: #fff;
+  transform: translateY(-50%);
+  padding: 10px;
+  right: -20px;
+}
+.Carousel-backArrow {
+  position: absolute;
+  display: none;
+  z-index: 3;
+  right: 101%;
+  margin-right: 5px;
+  padding: 20px 15px;
+  height: 100%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+}
+.Carousel-backArrow > div {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  color: #fff;
+  transform: translateY(-50%);
+  padding: 10px;
+  left: -20px;
+}
+.fa-arrow-right:before, .fa-arrow-left:before {
+  color: #222;
+}
+h1 {
+  text-align: center;
+}
+@media only screen and (max-width: 599px) {
+  .Carousel-proactive .Carousel-single-content, .Carousel-preactive .Carousel-single-content {
+    opacity: 0 !important;
+ }
+}

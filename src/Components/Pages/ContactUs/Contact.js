@@ -4,7 +4,7 @@ import Header from '../../Header/Header';
 import Iframe from 'react-iframe';
 import './contact.css'
 import { Fragment } from 'react';
-import { Facebook } from '@material-ui/icons';
+import { Facebook, Instagram, YouTube } from '@material-ui/icons';
 
 
 const Contact = () => {
@@ -20,9 +20,9 @@ const Contact = () => {
             <div className="social">
 
                 <a href="#"><Facebook/></a>
-                <a href="#"><Facebook/></a>
-                <a href="#"><Facebook/></a>
-                <a href="#"><Facebook/></a>
+                <a href="#"><Instagram/></a>
+                <a href="#"><YouTube/></a>
+                {/* <a href="#"><T/></a> */}
 
 
             </div>
@@ -31,8 +31,8 @@ const Contact = () => {
                         <h1>Get In Touch</h1>
                         <p><a href="mailto:manikanthapanigrahi@gmail.com">
                          E-mail us Regarding your Issue
-                          </a>
-                          Call us <a href="tel:+91 8455846313"></a>
+                          </a> or
+                          <a href="tel:+91 8455846313"> Call Us</a>
                           </p>
                     </div>
                     <div className="cInputs">
