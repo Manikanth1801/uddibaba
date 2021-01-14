@@ -72,16 +72,21 @@ const Header = (props)=>{
     <header className={classes.main} 
     style={{
         background: "linear-gradient(rgba(46, 43, 43, 0.8), rgba(109, 51, 51, 0.5)) center no-repeat" }}>
-        {/* <video autoPlay muted loop > */}
-            {/* <source src="/asserts/video.mp4" type="video/mp4" /> */}
-            <ReactPlayer url="https://www.youtube.com/watch?v=DUtBFxvyUJ0" width="100%" height="100%"
-            className="video" loop="true" controls="false" playing="true"/>
-        {/* </video>         */}
-        <div className="navBar my-4">
+        <video autoPlay muted loop > 
+             <source src="/asserts/video.mp4" type="video/mp4" />
+            {/* <ReactPlayer url="https://www.youtube.com/watch?v=DUtBFxvyUJ0" width="100%" height="100%"
+            className="video" muted loop="true" controls="false" playing="true"/> */}
+        </video>        
+        <div className="navBar fixed">
 
 
 
-                        <nav className="navbar navbar-expand-md  navbar-dark bg-transparent ">
+                        <nav className="navbar navbar-expand-md  navbar-dark bg-transperent" onScroll=
+                        {()=>{if (window.scrollY > 20) {
+                            document.querySelector(".bg-transperent").className = "bg-light "
+                          } else {
+                            document.querySelector(".bg-transperent").className = "bg-transperent";
+                          }}}>
                             <h1 className="brandName navbar-brand">
                                 <Link to="/">Br<span>a</span>nd</Link>
                             </h1>
@@ -99,9 +104,9 @@ const Header = (props)=>{
                                     <li className="nav-item">
                                         <Link className="nav-link text-white" to="/contact">CONTACT</Link>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <Link className="nav-link text-white" to="/blog">BLOG</Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
                                         <Link className="nav-link text-white" to="/booking">BOOK NOW</Link>
                                     </li>

@@ -60,7 +60,7 @@ const Hero = () =>{
     //     </Grid>
     //   </div>
     // </div>
-    <div className="container col-md-6 col-sm-10 col-xs-10" ref = {textRef => {textAnim = textRef}}>
+    <div className=" col-md-6 col-sm-10 col-xs-10" ref = {textRef => {textAnim = textRef}}>
       <Grid item xs={6} style={{opacity:"0.85", backgroundColor:"lightgray" ,borderRadius:40}}>
       <Button
         fullWidth

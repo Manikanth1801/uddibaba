@@ -28,8 +28,12 @@ const Contact = () => {
             </div>
                 <div className="contactBox">
                     <div className="cHead">
-                        <h1>Get In TOuch</h1>
-                        <p>Call us or E-mail us Regarding your Issue</p>
+                        <h1>Get In Touch</h1>
+                        <p><a href="mailto:manikanthapanigrahi@gmail.com">
+                         E-mail us Regarding your Issue
+                          </a>
+                          Call us <a href="tel:+91 8455846313"></a>
+                          </p>
                     </div>
                     <div className="cInputs">
                         <input type="text" name="" id="" placeholder="Full Name"/>

@@ -180,17 +180,29 @@ export default function Footer() {
                                     <a href="#" ><Facebook/> </a>
                                     <a href="#" ><Facebook/> </a>
                                     <a href="#" ><Facebook/> </a>
+                                    <div class="elfsight-app-69cd6613-5ea9-445a-af28-f3c7b035425f"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div className="footer_bottom">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 col-sm-7 offset-lg-6">
+                          <Typography align="center" component="a">
+                          <a href="http://www.mxrapro.com" className="mb-0 text-primary">© MXRAPRO Inc.. 2021 All rights reserved.</a>
+                          </Typography>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 </div>
                 <div className="footer_bg">
                     <div className="footer_bg_one"></div>
                     <div className="footer_bg_two"></div>
                 </div>
             </div>
-            <div className="footer_bottom">
+            {/* <div className="footer_bottom">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-sm-7">
@@ -200,7 +212,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </footer>
       
       {/* <Typography variant="subtitle2">

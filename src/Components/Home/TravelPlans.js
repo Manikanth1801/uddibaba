@@ -54,9 +54,11 @@ function Copyright() {
       paddingBottom: theme.spacing(8),
     },
     card: {
+      borderRadius:"15px",
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
+      // boxShadow:"none",
     },
     cardMedia: {
       paddingTop: '56.25%', // 16:9
@@ -89,13 +91,13 @@ function Copyright() {
 
 
 
-<Container className={classes.cardGrid} maxWidth="md">
+<Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
                 
               <Grid item key={card} xs={12} sm={6} md={4}>
-                  <Tilt option={{max:50, speed:600}} style={{boxShadow:"none"}} >
+                  <Tilt option={{max:50, speed:600}} style={{boxShadow:"none !important"}} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -107,7 +109,9 @@ function Copyright() {
                       Plan Name
                     </Typography>
                     <Typography>
-                      Short desc of the plan
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi delectus accusamus a voluptatibus
+                       consequatur modi incidunt dolore ipsa quis 
+                       atque eum nobis perspiciatis amet reiciendis ex, ab, quisquam, optio omnis.
                     </Typography>
                     <CardActions>
                     <Button size="large" color="primary" variant="contained" fullWidth >

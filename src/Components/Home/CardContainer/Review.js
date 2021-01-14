@@ -38,7 +38,7 @@ export default function FeaturedPost(props) {
 {/* <!-- Box 2 below --> */}
 <div className="space">
     <div className="imgBox">
-        <img src={post.image} width="270px" height="180px" alt="classic Card" />
+        <img src={post.image} alt="features"  style={{borderRadius:"25px"}} />
     </div>
     <div className="contentBox">
         <h3>

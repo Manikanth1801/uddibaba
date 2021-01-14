@@ -13,9 +13,9 @@ import {Link} from 'react-router-dom';
 const NavBar = () =>{
 
     return(
-        <Fragment>
-
-        <nav className="navbar navbar-expand-md  navbar-dark bg-secondary ">
+        <Fragment >
+          
+        <nav className="navbar navbar-expand-md  navbar-light  bg-light py-0">
                             <h1 className="brandName navbar-brand">
                                 <Link to="/">Br<span>a</span>nd</Link>
                             </h1>
@@ -27,17 +27,17 @@ const NavBar = () =>{
 
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav ml-auto" >
-                                    <li className="nav-item active ">
+                                    <li className="nav-item  ">
                                         <Link className="nav-link " to="/about">ABOUT</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link text-white" to="/contact">CONTACT</Link>
+                                        <Link className="nav-link " to="/contact">CONTACT</Link>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <Link className="nav-link text-white" to="/blog">BLOG</Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
-                                        <Link className="nav-link text-white" to="/booking">BOOK NOW</Link>
+                                        <Link className="nav-link " to="/booking">BOOK NOW</Link>
                                     </li>
 
                                 </ul>

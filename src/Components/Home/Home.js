@@ -13,6 +13,7 @@ import Header from '../Header/Header';
 
 
 
+
 const featuredPosts = [
   {
     title: 'Allison Hargrvees',
@@ -47,7 +48,8 @@ const featuredPosts = [
 const useStyle= makeStyles ({
   root:{
     margin:"40px",  
-    marginTop:"120px",    
+    marginTop:"120px",  
+      
   },
   
 });
@@ -85,6 +87,10 @@ const useStyle= makeStyles ({
           
 
           <div style = {{marginTop:"120px"}}>
+
+            <marquee behavior="scroll" direction="right">
+            <img src="/asserts/images/78nE.gif" width="125" height="82" alt="Flying Bat"/>
+            </marquee>
             
 
             <Images style = {{marginTop:"60px"}}/>
@@ -101,7 +107,7 @@ const useStyle= makeStyles ({
             </Typography>
             </Grid>
 
-          <div className={classes.root}>
+          {/* <div className={classes.root}> */}
             
             
           <Grid container spacing={4}>
@@ -110,7 +116,7 @@ const useStyle= makeStyles ({
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-          </div>
+          {/* </div> */}
           </List>
           
         </div>

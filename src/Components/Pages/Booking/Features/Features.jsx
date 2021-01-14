@@ -159,7 +159,7 @@ function Features() {
             </Typography>
           </div>
         </div>
-        <div className="col-12 col-sm-6 mt-5 mt-sm-0">
+        <div className="col-12 col-sm-6 mt-5 mt-sm-0 ">
           <Fragment>
             <BookingForm />
           </Fragment>

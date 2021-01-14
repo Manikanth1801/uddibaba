@@ -27,7 +27,7 @@ function BookingForm() {
   return (
     <Fragment>
       <div className="bookingForm w-75 m-auto ">
-        <Paper>
+        <Paper className="">
           <form>
             <Card className="" variant="outlined">
               <CardContent>

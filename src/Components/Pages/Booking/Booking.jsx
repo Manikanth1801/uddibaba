@@ -6,12 +6,14 @@ import Amenities from "./Amenities/Amenities";
 import Hero from "./HeroSection/Hero";
 import Header from "../../Header/Header";
 import NavBar from "../../Header/Header2";
+import ImageGrid from './HeroSection/ImageGrid'
 
 const Booking = ()=> {
   return (
     <Fragment>
       <NavBar/>
-      <Hero />
+      {/* <Hero /> */}
+      <ImageGrid/>
       <Features />
       <Amenities />
     </Fragment>
