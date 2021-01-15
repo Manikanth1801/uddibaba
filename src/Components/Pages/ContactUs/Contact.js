@@ -54,7 +54,7 @@ const Contact = () => {
 
                 </div>
         </section>
-        <div style={{height:"100vh"}}>
+        <div className="screnHeight">
           
         </div>
     

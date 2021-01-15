@@ -23,7 +23,7 @@ const HorizontalCards = (props) => {
 
     return (
         
-            <div className="container" >
+            <div className="" >
                 <div>
                     {/* <SlideCard/> */}
                     <MemoSlider slides={slides}/>

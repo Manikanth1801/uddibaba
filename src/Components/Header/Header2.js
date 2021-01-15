@@ -18,7 +18,7 @@ const NavBar = () =>{
         <nav className="navbar navbar-expand-md  navbar-light  bg-light py-0">
                             <h1 className="brandName navbar-brand ">
                                 <Link to="/">
-                                  <img src="/asserts/images/Ud.png" alt=""/>
+                                  <img src="/asserts/images/UD.png" alt=""/>
                                 </Link>
                             </h1>
                             <button className="navbar-toggler text-white" type="button" data-toggle="collapse"

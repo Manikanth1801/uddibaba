@@ -42,7 +42,7 @@ export default function Images() {
         <Container className={classes.root} >
         
             <Grid container spacing={3}>
-            <Grid item xs={11} sm={11} md={6} lg={6} >
+            <Grid item xs={11} sm={11} md={8} lg={8} >
                             <div className = {classes.slideMedia}>
                             <HorizontalCards style={{padding:"25px", overflowX:"hidden"}} />
                             </div> 
@@ -57,8 +57,8 @@ export default function Images() {
                     </div>
                 </div> */}
 
-                <Grid item xs={11} sm={11} md={6} lg={6} style={{background:"none", overflowX:"hidden"}} >
-                    <div className="container mx-5 mt-5">
+                <Grid item xs={12} sm={12} md={4} lg={4} style={{background:"none", overflowX:"hidden"}} >
+                    <div className="container  mt-5">
 
                     <Paper style={{boxShadow:"none", background:"none"}} className="my-5" >
                     <Typography variant="h3" align = "left">

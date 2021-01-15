@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme)=>({
     },
     main:{
         overflowX:"hidden",
+        paddingBottom:"25px",
 
     },
 

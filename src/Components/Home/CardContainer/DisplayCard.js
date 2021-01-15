@@ -53,11 +53,11 @@ function DisplayCard(props) {
       const classes = useStyles(styleProps);
 
   return (
-    <Fragment>
+    <Fragment >
         
       
                       
-                      <figure className="snip1581"><img src={props.image} alt="profile-sample2"/>
+                      <figure className="snip1581 mt-5"><img src={props.image} alt="profile-sample2"/>
                       <figcaption>
                         <h3 className="title1">{props.title1}</h3>
                         <h3 className="title2">{props.title2}</h3>

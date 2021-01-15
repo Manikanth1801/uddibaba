@@ -29,7 +29,7 @@ const Hero = () =>{
         1.2,
         {
           opacity:1,
-          y: -250,
+          y: -400,
           ease: Power3.easeOut
         }
       )
@@ -60,8 +60,15 @@ const Hero = () =>{
     //     </Grid>
     //   </div>
     // </div>
-    <div className=" col-md-6 col-sm-10 col-xs-10" ref = {textRef => {textAnim = textRef}}>
-      <Grid item xs={6} style={{opacity:"0.85", backgroundColor:"lightgray" ,borderRadius:40}}>
+    <div className=" col-md-8 col-sm-10 col-xs-10" ref = {textRef => {textAnim = textRef}}>
+        <Typography variant="h4" className="ml-5 mb-3" style={{color:"whitesmoke "}}>
+          To Travel Is
+        </Typography>
+        <Typography variant="h1" className="mx-5 mb-3"  align="left" style={{color:"whitesmoke "}}>
+          TO Live
+        </Typography>
+      <Grid item className="ml-5" xs={6} style={{opacity:"0.85", backgroundColor:"lightgray" ,borderRadius:40}}>
+
       <Button
         fullWidth
         size="large"

@@ -39,6 +39,30 @@ const featuredPosts = [
     image: 'https://picsum.photos/600/310',
     imageText: 'Image Text',
   },
+  {
+    title: 'Mr. Myagyi',
+    date: 'Nov 21',
+    description:
+      'Some more text in here next',
+    image: 'https://picsum.photos/600/310',
+    imageText: 'Image Text',
+  },
+  {
+    title: 'Mr. Myagyi',
+    date: 'Nov 21',
+    description:
+      'Some more text in here next',
+    image: 'https://picsum.photos/600/310',
+    imageText: 'Image Text',
+  },
+  {
+    title: 'Mr. Myagyi',
+    date: 'Nov 21',
+    description:
+      'Some more text in here next',
+    image: 'https://picsum.photos/600/310',
+    imageText: 'Image Text',
+  },
 ];
 
 
@@ -65,7 +89,7 @@ const useStyle= makeStyles ({
          >
           
           <List className={`amenities${classes.root} `} >
-          <Typography variant="h4" 
+          <Typography variant="h3" 
           align='left'
           className="mx-5"
           >

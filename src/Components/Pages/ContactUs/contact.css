@@ -23,12 +23,12 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5e91c0;
+    background-color: #b2b6b9;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, .1);
 }
 
 .social a:hover{
-    color: #cf1f1f;
+    color: #1f8fcf;
     transition: all ease 0.3s;
 }
 
@@ -159,5 +159,14 @@ a{
     .cHead h1{
         font-size: 2.2rem;
         text-align: center;
+    }
+}
+
+.screnHeight{
+    height: 100vh;
+}
+@media(max-width:550px){
+    .screnHeight{
+        display: none;
     }
 }
