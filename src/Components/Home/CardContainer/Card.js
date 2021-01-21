@@ -68,7 +68,7 @@ export default function AmeCard() {
 
   
             <Grid container
-            spacing={3}
+            spacing={4}
             alignContent="flex-end"
             >
               

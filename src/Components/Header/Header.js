@@ -4,6 +4,7 @@ import  MenuIcon  from '@material-ui/icons/Menu';
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
+import Hero from '../Home/Hero';
 import "./headStyle.css"
 // import Hero from '../Home/Hero'
 
@@ -59,7 +60,8 @@ const Header = (props)=>{
                     {console.log(props)}
     <header className={classes.main} 
     style={{
-        background: "linear-gradient(rgba(46, 43, 43, 0.8), rgba(109, 51, 51, 0.5)) center no-repeat" }}>
+        background: "white center no-repeat" }}>
+            {/* linear-gradient(rgba(46, 43, 43, 0.8), rgba(109, 51, 51, 0.5)) */}
         <video autoPlay muted loop > 
              <source src="/asserts/Uddibaba.mp4" type="video/mp4" />
              {/* <iframe className="video" width="560" height="315" src="https://www.youtube.com/embed/DUtBFxvyUJ0?controls=0&amp;start=20"
@@ -67,6 +69,7 @@ const Header = (props)=>{
             {/* <ReactPlayer url="https://drive.google.com/file/d/1poHN3isJF7kqjrWnTg8qOLr1PRHJ1VMo/preview" width="640" height="480" width="100%" height="100%"
             className="video" muted loop="true" controls="false" playing="true"/> */}
         </video>        
+    
         <div className="navBar ">
 
 
@@ -79,7 +82,8 @@ const Header = (props)=>{
                           }}}>
                             <h1 className="brandName navbar-brand">
                                 <Link to="/">
-                                    <img src="/asserts/images/UD.png" alt=""/>
+                                    <span>UDDIBABA</span>
+                                    {/* <img src="/asserts/images/UD.png" alt=""/> */}
                                     </Link>
                             </h1>
                             <button className="navbar-toggler text-white" type="button" data-toggle="collapse"
@@ -110,6 +114,7 @@ const Header = (props)=>{
 
 
         </div>
+        <Hero/>
 
 
     </header>

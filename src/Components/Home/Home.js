@@ -72,7 +72,7 @@ const featuredPosts = [
 const useStyle= makeStyles ({
   root:{
     margin:"40px",  
-    marginTop:"120px",  
+    // marginTop:"120px",  
       
   },
   
@@ -83,12 +83,13 @@ const useStyle= makeStyles ({
   return (
     <div>
       <Header/>
-        <Hero/>
         <div className={classes.root}
         disableGutters={true}
          >
           
           <List className={`amenities${classes.root} `} >
+          <div className=" py-5">
+
           <Typography variant="h3" 
           align='left'
           className="mx-5"
@@ -107,10 +108,11 @@ const useStyle= makeStyles ({
             <AmeCard/> 
 
           </ListItem>
+          </div>
 
           
 
-          <div style = {{marginTop:"120px"}}>
+          <div style = {{paddingTop:"160px"}}>
 
             <marquee behavior="scroll" direction="right">
             <img src="/asserts/images/78nE.gif" width="125" height="82" alt="Flying Bat"/>

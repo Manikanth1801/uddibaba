@@ -15,7 +15,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
+
+
 
 
 
@@ -69,7 +71,23 @@ function Copyright() {
     
   }));
   
-  const cards = [1, 2, 3];
+  const cards = [
+    {
+    PlanName:"Plan A",
+    PlanDec:"",
+    PlanId:"1"
+    }, 
+    {
+      PlanName:"Plan B",
+      PlanDec:"",
+      PlanId:"2"
+      },
+      {
+        PlanName:"Plan c",
+        PlanDec:"",
+        PlanId:"3"
+        }
+    ];
 
  function Plans() {
     const classes = useStyles();
@@ -114,7 +132,7 @@ function Copyright() {
                        atque eum nobis perspiciatis amet reiciendis ex, ab, quisquam, optio omnis.
                     </Typography>
                     <CardActions>
-                    <Button size="large" color="primary" variant="contained" fullWidth >
+                    <Button size="large" color="primary" variant="contained" fullWidth  component={Link} to="/booking">
                       BOOK NOW
                     </Button>
                     {/* <Button size="small" color="primary">
@@ -150,236 +168,6 @@ export default Plans
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { Fragment } from 'react';
-// import Flippy ,{FrontSide, BackSide} from 'react-flippy';
-
-
-
-
-
-
-
-
-
-// const FlippyStyle = {
-//     width: '300px',
-//     height: '300px',
-//     textAlign: 'center',
-//     color: '#FFF',
-//     fontFamily: 'sans-serif',
-//     fontSize: '30px',
-//     justifyContent: 'center',
-//     margin:"30px"
-//   }
-  
-  
-//   const DefaultCardContents = ({ children }) => (
-//     <React.Fragment>
-//       <FrontSide
-//         style={{
-//           backgroundColor: '#41669d',
-//           display: 'flex',
-//           alignItems: 'center',
-//           flexDirection: 'column'
-//         }}
-//       >
-//         <img
-//           src="https://picsum.photos/900/500 "
-//           alt='...img'
-//           style={{ maxWidth: '100%', maxHeight: '100%' }}
-//         />
-//         Test
-//         <span 
-//           style={{
-//             fontSize:'12px',
-//             position: 'absolute',
-//             bottom: '10px',
-//             width: '100%'
-//           }}>
-//           {children}<br />
-//           (FRONT SIDE)
-//         </span>
-//       </FrontSide>
-//       <BackSide
-//         style={{
-//           backgroundColor: '#175852',
-//           display: 'flex',
-//           alignItems: 'center',
-//           justifyContent: 'center',
-//           flexDirection: 'column'
-//         }}>
-//         ROCKS
-//         <span 
-//           style={{
-//             fontSize:'12px',
-//             position: 'absolute',
-//             bottom: '10px',
-//             width: '100%'
-//           }}>
-//           {children}<br />
-//           (BACK SIDE)
-//         </span>
-//       </BackSide>
-//     </React.Fragment>);
-  
-//   const FlippyOnHover = ({ flipDirection = 'horizontal' }) => (
-//     <Flippy
-//       flipOnHover={true}
-//       flipDirection={flipDirection}
-//       style={FlippyStyle}
-//     >
-        
-//       <DefaultCardContents>
-//       HoneyMoon Plan <br/>
-//       <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Select</button>
-//       </DefaultCardContents>
-//     </Flippy>
-//   );
-  
-  
-  
-  
-  
-//   export default class Plans extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//         isFlipped: false
-//       };
-  
-//       setInterval(() => {
-//         this.setState({
-//           isFlipped: !this.state.isFlipped
-//         });
-//       }, 3000);
-//     }
-  
-//     render() {
-//       return (
-//         <div className="Flipy">
-//           <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
-//               <Flippy
-//                 ref={(r) => this.flippyHorizontal = r}
-//                 flipOnHover={true}
-//                 flipOnClick={false}
-//                 style={FlippyStyle}
-//               >
-//               <DefaultCardContents>
-//                 IThe Christmas plan<br />
-//                 <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Select</button>
-//               </DefaultCardContents>
-//             </Flippy>
-
-//             <FlippyOnHover/>
-//             <FlippyOnHover/>
-
-
-             
-//           </div>
-//         </div>
-//       );
-//     }
-//   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // const Plans = () =>{
-
-// //   return(
-// //     <section className="block relative z-1 ">
-// //         <div className="holder mx-auto">
-// //           <div className="justify-center flex flex-wrap">
-// //             <div className="w-full lg:w-12/12 px-4  -mt-24">
-// //               <div className="flex flex-wrap">
-// //                 <div className="w-full lg:w-4/12 px-4">
-// //                   <h5 className="text-xl font-semibold pb-4 text-center">
-// //                     Regular Pakage
-// //                   </h5>
-// //                   {/* <Link to="/auth/login"> */}
-// //                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-// //                       <img
-// //                         alt="..."
-// //                         className="align-middle border-none max-w-full h-auto rounded-lg"
-// //                         src="https://picsum.photos/300/200"
-// //                       />
-                      
-// //                     </div>
-// //                   {/* </Link> */}
-// //                 </div>
-
-// //                 <div className="w-full lg:w-4/12 px-4">
-// //                   <h5 className="text-xl font-semibold pb-4 text-center">
-// //                     Adventure Pakage
-// //                   </h5>
-// //                   {/* <Link to="/profile"> */}
-// //                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-// //                       <img
-// //                         alt="..."
-// //                         className="align-middle border-none max-w-full h-auto rounded-lg"
-// //                         src="https://picsum.photos/300/200"
-// //                       />
-// //                     </div>
-// //                   {/* </Link> */}
-// //                 </div>
-
-// //                 <div className="w-full lg:w-4/12 px-4">
-// //                   <h5 className="text-xl font-semibold pb-4 text-center">
-// //                     Digital Nomadic
-// //                   </h5>
-// //                   {/* <Link to="/landing"> */}
-// //                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-// //                       <img
-// //                         alt="..."
-// //                         className="align-middle border-none max-w-full h-auto rounded-lg"
-// //                         src="https://picsum.photos/300/200"
-// //                       />
-// //                     </div>
-// //                   {/* </Link> */}
-// //                 </div>
-// //               </div>
-// //             </div>
-// //           </div>
-// //         </div>
-// //       </section>
-
-// //   );
-// // }
-
-
-
-
-
-// // export default Plans;
 
 
 

@@ -27,102 +27,11 @@ const useStyles = makeStyles({
 
 export default function Footer() {
   const classes = useStyles();
-  // const [value, setValue] = React.useState('recents');
-
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
-
+  
   return (
     <Fragment>
 
-      {/* <footer className={classes.root}>
-      <Container style={{paddingTop:"10%"}} >
-
-      <BottomNavigation style={{background:"none"}} >
-        <Grid container spacing={3} justify="center"alignItems="center" >
-          <Grid item lg={4} md={4} sm={12} xs={12}>
-            <Paper className={classes.footerText}>
-              <Typography variant="h5">
-                Col HEad
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-            </Paper>
-          </Grid>
-
-          <Grid item lg={4} md={4} sm={12} xs={12}>
-            <Paper className={classes.footerText}>
-              <Typography variant="h5">
-                Col HEad
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-            </Paper>
-          </Grid>
-
-          <Grid item lg={4} md={4} sm={12} xs={12}>
-            <Paper className={classes.footerText}>
-              <Typography variant="h5">
-                Col HEad
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-              <Typography variant="h6">
-                col item
-              </Typography>
-            </Paper>
-            <div className="icons">
-               
-            </div>
-          </Grid>
-
-          
-          
-        </Grid>
-
-        
-        
-      
-    </BottomNavigation>
-
-      </Container> */}
-      {/* <hr style={{marginTop:"18%"}}/>
-      <Grid item xs={12} style={{color:"crimsonred"}} >
-            <Typography variant="subtitle2">
-              All copyrights reserve to <span><a href="#">mxrapro</a></span>
-            </Typography>
-
-          </Grid> */}
-      
-      {/* </footer> */}
+     
 
       
   <footer className="new_footer_area bg_color">

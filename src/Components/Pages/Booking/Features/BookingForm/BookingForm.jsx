@@ -1,5 +1,5 @@
-import { IconButton, Paper } from "@material-ui/core";
-import React, { Fragment, useState } from "react";
+import { IconButton, InputLabel, MenuItem, Paper, Select } from "@material-ui/core";
+import React, { Fragment, useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import { Form, Field } from 'react-final-form';
 import { TextField,  } from 'final-form-material-ui';
@@ -17,6 +17,8 @@ import {
 import DateFnsUtils from '@date-io/date-fns';
 import {KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers'
 import {  AddRounded, RemoveRounded } from "@material-ui/icons";
+import Content from "../../../../../Content/HomeContent";
+import firebase from '../../../../../firebase'
 // import CardActions from "@material-ui/core/CardActions";
 // import { DateRangePicker, DateRange } from "materialui-daterange-picker";
 // import Select from "react-select";
@@ -34,11 +36,59 @@ const useStyles = makeStyles((theme) => ({
 
 
 
+
+
 const onSubmit = async values => {
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   await sleep(300);
-  window.alert(JSON.stringify(values, 0, 2));
+  console.log("hii++++++++++++++++++++++++++++++++++++++++++++----------------------------", values)
+  console.log(paymentURL);
+  resultPage(finalData);
+  // window.alert(JSON.stringify(values, 0, 2));
+  window.location.assign(`${paymentURL}`);
+
+  
 };
+
+
+
+let finalData={};
+let paymentURL="";
+
+const spreadEvent = (e, values,Selected)=>{
+  values.plan=Selected
+  finalData=values;
+  switch (finalData.plan) {
+    case "Plan A":
+      return paymentURL = "https://rzp.io/l/UddiPlanA"
+      break;
+    case "Plan B":
+      return paymentURL = "https://rzp.io/l/UddiPlanB"
+      break;
+
+    case "Plan C":
+      return paymentURL = "https://rzp.io/l/UddiPlanC"
+      break;
+  
+    default:
+      return paymentURL = "https://rzp.io/l/UddiPlanA"
+      break;
+  }
+}
+
+const resultPage=(finalData)=>{
+  console.log("hii++++++++++++++++++++++++++++++++++++++++++++----------------------------", finalData)
+  const db = firebase.firestore()
+  db.collection("Booking List").add(finalData);
+  return(
+    <div>
+
+    </div>
+  );
+}
+
+
+
 const validate = values => {
   const errors = {};
   if (!values.firstName) {
@@ -50,44 +100,40 @@ const validate = values => {
   if (!values.email) {
     errors.email = 'Required';
   }
+  if (!values.phone){
+    errors.phone = 'Required';
+  }
+
+
   return errors;
 };
 
 
 
-function BookingForm() {
-  const [CheckInDate, setCheckInDate] = React.useState(new Date('2021-08-18T21:11:54'));
-  const handleInDateChange = (date) => {
-    setCheckInDate(date);
-  };
-  const [CheckOutDate, setCheckOutDate] = React.useState(new Date('2021-08-18T21:11:54'));
+function BookingForm(props) {
+  
 
-  const handleOutDateChange = (date) => {
-    setCheckOutDate(date);
-  };
 
-  const [Adults, setAdults]=useState(0);
-  const [Children, setChildren]=useState(0);
-  const [Infant, setInfant]=useState(0);
 
-  const handleGuests=(name)=>{
-    console.log(name+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    // switch (operation) {
-    //   case add:{
-    //     console.log("add"+"+++++++++++++++++++++++++++++++++++++++++++++++++++")
-    //   }
-        
-    //     break;
-    //   case sub:{
-    //     console.log("sub"+"------------------------------------------------------")
-    //   }
+  //select plan code
+  const [Plans, setPlans] = React.useState([
+    "Plan A",
+    "Plan B",
+    "Plan C",
+  ]);
+  const [Selected, setSelected] = useState("Plan A");
+
+
+
+  function handleChange(event) {
     
-    //   default:
-    //     break;
-    // }
+    return setSelected(event.target.value);
+    
   }
+  
+  
+  console.log(Selected);
 
-  const [isDropdownOpen, setDropDownStatus] = useState(false);
 
   const classes = useStyles();
   return (
@@ -95,11 +141,13 @@ function BookingForm() {
       <div className="bookingForm w-75 m-auto " id="bookingForm">
       <Form
         onSubmit={onSubmit}
-        initialValues={{ employed: true, stooge: 'larry' }}
+        initialValues={{  }}
         validate={validate}
-        render={({ handleSubmit, submitting,  values }) => (
+        render={({ handleSubmit, submitting,  values }) =>{ 
+          
+          return (
         <Paper className="">
-          <form >
+          <form onSubmit={handleSubmit}>
             <Card className="" variant="outlined">
               <CardContent>
                 <div className="bookingFormHeader d-flex justify-content-between">
@@ -121,44 +169,6 @@ function BookingForm() {
                   <div className="border rounded position-relative">
                     <div className="d-flex">
 
-                      <div className="w-50 px-3 pt-3">
-                      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                        <KeyboardDatePicker
-                          clearable
-                          variant="inline"
-                          format="MM/dd/yyyy"
-                          margin="normal"
-                          id="date-picker-inline"
-                          label="Check In Date"
-                          value={CheckInDate}
-                          onChange={handleInDateChange}
-                          KeyboardButtonProps={{
-                            'aria-label': 'change date',
-                          }}
-                        />
-                        </MuiPickersUtilsProvider>
-
-                        {/* <Typography color="textSecondary">Add date</Typography> */}
-                      </div>
-                      <div className="w-50 px-3 pt-3">
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                        <KeyboardDatePicker
-                          clearable 
-                          variant="inline"
-                          format="MM/dd/yyyy"
-                          margin="normal"
-                          id="date-picker-inline"
-                          label="Check Out Date"
-                          value={CheckOutDate}
-                          onChange={handleOutDateChange}
-                          KeyboardButtonProps={{
-                            'aria-label': 'change date',
-                          }}
-                        />
-                        </MuiPickersUtilsProvider>
-                      
-                        {/* <Typography color="textSecondary">Add date</Typography> */}
-                      </div>
                     </div>
                     <hr className="mt-1" />
                     <div className="d-flex justify-content-between">
@@ -194,166 +204,66 @@ function BookingForm() {
                     label="Email"
                   />
                 </Grid>
-                <Grid className="px-3 pt-3 col-6" item xs={12}>
+                <Grid className="px-3 pt-3 col-6" item xs={12} md={6}>
                   <Field
-                    name="email"
+                    name="phone"
                     fullWidth
                     required
                     component={TextField}
-                    type="email"
-                    label="Email"
+                    type="phone"
+                    label="Phone"
                   />
                 </Grid>
-                          <div className="container pt-4">
-                            
-                          <Typography
-                          variant="p"
-                          align="left"
-                          className={classes.dateLabel}
-                        >
-                          GUESTS
-                        </Typography>
-                          </div>
-                        <div className="row">
-                        <div className="col-12">
-                          <Typography
-                          variant="span"
-                          className="pr-4"
-                          align="">
-                          <IconButton>
-                          <RemoveRounded
-                          className=""
-                           onClick={()=>handleGuests("adRem")}/>
-                            </IconButton>
-                            <Typography 
-                            variant="span"
-                            >
-                              Adult {}
-                            </Typography>
-                          <IconButton>
-                            <AddRounded onClick={()=>handleGuests("adAdd")}/>
-                          </IconButton>
-                          </Typography>
-
-                          <Typography align=""
-                          variant="span"
-                          className="pl-4 ml-2"
+                <Grid className="px-3 pt-2 col-6" item xs={12} md={6}>
+                <InputLabel htmlFor="agent-simple">Plan Type</InputLabel>
+                          <Select
+                          fullWidth
+                            value={Selected}
+                            onChange={(e)=>{handleChange(e)}}
+                            required
+                            inputProps={{
+                              name: "Plan",
+                              id: "age-simple"
+                            }}
                           >
-                          <IconButton>
-                          <RemoveRounded onClick={()=>handleGuests("chRem")}/>
-                            </IconButton>
-                            <Typography
-                            variant="span"
-                            >
-                              children {}
-                            </Typography>
-                          <IconButton>
-                            <AddRounded onClick={(add)=>handleGuests(add)}/>
-                          </IconButton>
-                          </Typography>
-
-                          </div>
-                          </div>
-                          <div className="row">
-                            <div className="container">
-                            <Typography align=""
-                          variant="span"
-
-                          >
-                          <IconButton>
-                          <RemoveRounded onClick={(sub)=>handleGuests(sub)}/>
-                            </IconButton>
-                            <Typography
-                            variant="span"
-                            >
-                              Infant {}
-                            </Typography>
-                          <IconButton>
-                            <AddRounded onClick={(add)=>handleGuests(add)}/>
-                          </IconButton>
-                          </Typography>
-                            </div>
-                          </div>
+                            {Plans.map((value) => {
+                              return <MenuItem value={value}>{value}</MenuItem>;
+                            })}
+                          </Select>
+                </Grid>
+                          
+                        
+                          
                         </div>
 
 
-                        {/* <Typography variant="subtitle2" color="textSecondary">
-                          1 guest
-                        </Typography> */}
+                        
                       </div>
 
-                      {/* <div
-                        className="px-3 pb-3 d-flex align-items-center"
-                        style={{ cursor: "pointer" }}
-                        onClick={() => setDropDownStatus(!isDropdownOpen)}
-                      >
-                        {isDropdownOpen ? (
-                          <svg
-                            viewBox="0 0 18 18"
-                            role="presentation"
-                            aria-hidden="true"
-                            focusable="false"
-                            style={{
-                              height: "16px",
-                              width: "16px",
-                              display: "block",
-                              fill: "currentcolor",
-                            }}
-                            // style="height: 16px; width: 16px; display: block; fill: currentcolor;"
-                          >
-                            <path
-                              d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"
-                              fill-rule="evenodd"
-                            ></path>
-                          </svg>
-                        ) : (
-                          <svg
-                            viewBox="0 0 18 18"
-                            role="presentation"
-                            aria-hidden="true"
-                            focusable="false"
-                            style={{
-                              height: "16px",
-                              width: "16px",
-                              display: "block",
-                              fill: "currentcolor",
-                            }}
-                            // style="height: 16px; width: 16px; display: block; fill: currentcolor;"
-                          >
-                            <path
-                              d="m1.71 13.71a1 1 0 1 1 -1.42-1.42l8-8a1 1 0 0 1 1.41 0l8 8a1 1 0 1 1 -1.41 1.42l-7.29-7.29z"
-                              fill-rule="evenodd"
-                            ></path>
-                          </svg>
-                        )}
-                      </div> */}
                     </div>
 
-                    {/* {isDropdownOpen ? (
-                      <div className="dropdownM position-absolute">
-                        <Paper fullWidth className=" px-3">
-                          DropDown
-                        </Paper>
-                      </div>
-                    ) : null} */}
+                    
                   </div>
                 </div>
 
                 <Button
+                onClick={(e)=>{spreadEvent(e,values,Selected)}}
                   fullWidth
                   className="mt-4  checkAvailability"
                   variant="contained"
                   color="secondary"
                   type="submit"
                     disabled={submitting}
+                    // onClick={sendData}
                 >
-                  BOOK NOW
+                  Payment & other Details
                 </Button>
               </CardContent>
             </Card>
           </form>
         </Paper>
-        )}/>
+        )}}/>
+        
       </div>
     </Fragment>
   );

@@ -166,42 +166,6 @@ function Features() {
         </div>
       </div>
 
-      {/* <Grid
-        container
-        direction="row"
-        justify="space-around"
-        alignItems="flex-start"
-        className=""
-        >
-        <Grid item xs={12} md={5} className="">
-         
-
-          <GridList className="d-flex flex-column">
-           
-
-          
-          </GridList>
-        </Grid>
-
-        <Grid item xs={12} md={5} justify="center" className="">
-          <div>
-            <BookingForm />
-          </div>
-
-          <StickyContainer>
-            <Sticky>
-              {({
-                style,
-                isSticky,
-                wasSticky,
-                distanceFromTop,
-                distanceFromBottom,
-                calculatedHeight,
-              }) => <BookingForm />}
-            </Sticky>
-          </StickyContainer>
-        </Grid>
-      </Grid> */}
     </section>
   );
 }
